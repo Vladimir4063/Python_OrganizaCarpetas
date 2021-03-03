@@ -12,6 +12,7 @@ ruta_descargas = "C:\\Users\\Vladimir_PC\\Downloads"
 ext_text = ['.docx', '.txt', '.doc', '.pdf', '.pptx']
 ext_foto = ['.png', '.jpg', '.jpeg', '.gif']
 ext_video = ['.mov', '.mp4']
+ext_audio = ['.mp3']
 ext_sfk = [".sfk"]
 
 def ordenar(archivo, ext):
@@ -27,12 +28,16 @@ def ordenar(archivo, ext):
         if ext == i:
             shutil.move(ruta_descargas + archivo, ruta_descargas + 'Videos') 
 
+    for i in ext_audio:
+        if ext == i:
+            shutil.move(ruta_descargas + archivo, ruta_descargas + 'Audio') 
+
     if ext != '':
             shutil.move(ruta_descargas + archivo, ruta_descargas + 'Otros') 
 
 def main():
     for archivo in os.listdir(ruta_descargas):
-        nombre_archivo, ext = os.path.splitext(archivo)
+        archivo, ext = os.path.splitext(archivo)
         ordenar(archivo, ext)
 
 main()
