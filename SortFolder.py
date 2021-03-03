@@ -7,7 +7,7 @@ import os
 import shutil 
 
 #Ordenamos la carpeta "Descargas"
-ruta_descargas = "C:\\Users\\Vladimir_PC\\Downloads"
+ruta_descargas = "C:\\Users\\Vladimir\\Descargas" 
 
 ext_text = ['.docx', '.txt', '.doc', '.pdf', '.pptx']
 ext_foto = ['.png', '.jpg', '.jpeg', '.gif']
