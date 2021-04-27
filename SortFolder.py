@@ -3,11 +3,17 @@
 
 #Import library - Importamos libreria
 
+"""EJECUTAR VARIAS VECES."""
+
 import os
 import shutil 
 
 #Ordenamos la carpeta "Descargas"
+
+ruta_descargas = ("C:\\Users\\Vladimir_PC\\Downloads\\")
+
 ruta_descargas = "C:\\Users\\Vladimir\\Descargas" 
+
 
 ext_text = ['.docx', '.txt', '.doc', '.pdf', '.pptx']
 ext_foto = ['.png', '.jpg', '.jpeg', '.gif']
@@ -37,7 +43,7 @@ def ordenar(archivo, ext):
 
 def main():
     for archivo in os.listdir(ruta_descargas):
-        archivo, ext = os.path.splitext(archivo)
+        nombre_archivo, ext = os.path.splitext(archivo)
         ordenar(archivo, ext)
 
 main()
